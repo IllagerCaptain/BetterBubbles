@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "betterbubbles",
+	"version": "${version}",
+	"name": "Better Bubbles",
+	"description": "Improves the oxygen bar on the hotbar!",
+	"authors": [
+		"IllagerCaptain"
+	],
+	"contact": {
+		"issues": "https://github.com/IllagerCaptain/BetterBubbles/issues",
+		"sources": "https://github.com/IllagerCaptain/BetterBubbles"
+	},
+	"license": "CC-BY-NC-SA-4.0",
+	"icon": "assets/betterbubbles/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.betterbubbles.BetterBubbles"
+		],
+		"client": [
+			"com.betterbubbles.BetterBubblesClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "betterbubbles.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"update_checker": true
+		}
+	}
+}
